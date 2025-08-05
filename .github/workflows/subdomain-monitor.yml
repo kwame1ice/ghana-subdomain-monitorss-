@@ -18,14 +18,14 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install dependencies
+    - name: Install requests
       run: pip install requests
 
     - name: Run script
       run: python monitor.py
 
     - name: Upload results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: subdomain-results
         path: results_*.txt
